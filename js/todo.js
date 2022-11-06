@@ -82,8 +82,6 @@ function handleToDoSubmit(event) {
 
   paintToDo(newToDoObject);
   saveToDos();
-
-  document.write('<script src="js/quotes.js"></script>');
 }
 
 replyForm.addEventListener("submit", handleToDoSubmit);
