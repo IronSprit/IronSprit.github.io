@@ -1,0 +1,46 @@
+.status-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  /* justify-content: space-between; */
+  /* 아래 작성된 방식으로 css hack 을 쓸거임 */
+  justify-content: center;
+  padding: 5px 3px;
+  /*  */
+  box-sizing: border-box;
+  align-items: center;
+}
+.status-bar__column {
+  width: 33%;
+}
+
+.status-bar__column:nth-child(2) {
+  display: flex;
+  justify-content: center;
+}
+
+.status-bar__column:last-child {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.status-bar__column .fa-battery-three-quarters {
+  margin: 0px 5px;
+}
+
+.status-bar__column:first-child span {
+  margin-right: 5px;
+  display: block;
+}
+
+.weather-body {
+  display: flex;
+  align-items: center;
+}
+
+.weather-body img {
+  width: 40px;
+  height: 40px;
+}

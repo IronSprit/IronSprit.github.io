@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Momentum App</title>
+  </head>
+  <body>
+    <div class="status-bar">
+      <div class="status-bar__column">
+        <div class="weather-body">
+          <span id="city"></span>
+          <span id="weather" class="weather-body__img"> </span>
+        </div>
+      </div>
+      <div id="clock" class="status-bar__column">
+        <span>18:44</span>
+      </div>
+      <div class="status-bar__column"></div>
+    </div>
+
+    <header class="welcome-header">
+      <h1 class="welcome-header__title">어서오세요 반갑습니다.</h1>
+      <p class="welcome-header__text">
+        동기 부여 되는 말과 함께 하루를 시작하세요.
+      </p>
+    </header>
+
+    <form id="login-form" class="hidden">
+      <input
+        name="username"
+        required
+        maxlength="15"
+        type="text"
+        placeholder="이름을 입력 해 주세요."
+      />
+      <input type="submit" value="Log In" required />
+    </form>
+
+    <!-- Script는 제일 아래 추가됨. -->
+    <script
+      src="https://kit.fontawesome.com/6478f529f2.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="js/login.js"></script>
+    <!-- <script src="js/greetings.js"></script> -->
+    <script src="js/clock.js"></script>
+    <!-- <script src="js/weather.js"></script> -->
+  </body>
+</html>

@@ -1,0 +1,58 @@
+.alt-header {
+  display: flex;
+  position: fixed;
+  /* justify-content: space-between; */
+  align-items: center;
+  padding: var(--horizontal-space);
+
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.alt-header__title {
+  font-size: 23px;
+  font-weight: 600;
+}
+
+/* 꼼수로 정렬하기. */
+.alt-header__column {
+  width: 33%;
+}
+
+/* justify-content: space-between; 와 비슷하게 사용 할 수 있음*/
+.alt-header__column:first-child {
+  margin-right: auto;
+}
+
+.alt-header__column:nth-child(2) {
+  text-align: center;
+}
+
+.alt-header__column:last-child {
+  margin-left: auto;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.alt-header__column:last-child span {
+  margin-left: 20px;
+}
+.settings__setting {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: 20px;
+  padding-bottom: 30px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.settings__setting i {
+  margin-right: 15px;
+  font-size: 22px;
+  opacity: 0.8;
+}
+
+.settings__setting-column:last-child {
+  opacity: 0.5;
+}
