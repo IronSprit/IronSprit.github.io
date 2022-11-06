@@ -1,4 +1,4 @@
-// const toDoForm = document.getElementById("todo-form");
+const toDoForm = document.getElementById("todo-form");
 const toDoList = document.getElementById("todo-list");
 
 const replyForm = document.querySelector(".reply");
@@ -82,6 +82,8 @@ function handleToDoSubmit(event) {
 
   paintToDo(newToDoObject);
   saveToDos();
+
+  document.write('<script src="js/quotes.js"></script>');
 }
 
 replyForm.addEventListener("submit", handleToDoSubmit);
