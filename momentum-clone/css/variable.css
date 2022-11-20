@@ -1,0 +1,7 @@
+:root {
+  --yellow: #fae100;
+  --gray: rgba(0, 0, 0, 0.5);
+  --horizontal-space: 35px;
+  --split-header: 2px solid rgba(0, 0, 0, 0.2);
+  --darkGreen: #768f74;
+}

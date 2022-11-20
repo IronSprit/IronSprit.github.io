@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Momentum App</title>
+  </head>
+  <body>
+    <div class="status-bar">
+      <div class="status-bar__column">
+        <div class="weather-body">
+          <span id="city"></span>
+          <span id="weather"></span>
+          <img src="" />
+        </div>
+      </div>
+      <div id="clock" class="status-bar__column">
+        <span></span>
+      </div>
+      <div class="status-bar__column"></div>
+    </div>
+    <header class="alt-header">
+      <div class="alt-header__column">
+        <a href="index.html">
+          <i class="fas fa-angle-left fa-2x"></i>
+        </a>
+      </div>
+      <div class="alt-header__column">
+        <h1 class="alt-header__title"></h1>
+      </div>
+      <div class="alt-header__column"></div>
+    </header>
+    <main id="chat-screen" class="main-screen chat">
+      <div class="chat__top"></div>
+      <div class="chat__timestamp">
+        <span></span>
+      </div>
+      <form id="todo-form">
+        <div></div>
+        <div class="todo-form__board">
+          <ul id="todo-list"></ul>
+        </div>
+        <div></div>
+      </form>
+      <div class="message-row message-row--quote">
+        <img src="" />
+        <div class="message-row__content">
+          <span class="message__author"></span>
+          <div class="message__body">
+            <span class="message__buble"></span>
+            <span class="message__time"></span>
+          </div>
+        </div>
+      </div>
+      <div class="message-row message-row--own">
+        <div class="message-row__content">
+          <div class="message__body">
+            <span class="message__buble"></span>
+            <span class="message__time"></span>
+          </div>
+        </div>
+      </div>
+    </main>
+    <form class="reply">
+      <div class="reply__column"></div>
+      <div class="reply__column">
+        <input
+          type="text"
+          placeholder="Write a To Do and Press Enter. Enjoy random quotes."
+        />
+      </div>
+      <div class="reply__column"></div>
+    </form>
+    <!-- <h1 id="greeting" class="hidden"></h1> -->
+    <script
+      src="https://kit.fontawesome.com/6478f529f2.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="js/quotes.js"></script>
+    <!-- <script src="js/background.js"></script> -->
+    <script src="js/todo.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/weather.js"></script>
+  </body>
+</html>

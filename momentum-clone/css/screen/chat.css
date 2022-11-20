@@ -1,0 +1,199 @@
+#chat-screen {
+  background-color: var(--darkGreen);
+
+  height: auto;
+}
+
+#chat-screen .status-bar {
+  z-index: 2;
+  background-color: var(--darkGreen);
+}
+#chat-screen .alt-header {
+  z-index: 1;
+  background-color: var(--darkGreen);
+  padding-bottom: 10px;
+}
+
+/* fixed 때문에 레이어가 맞지 않는다. 해결은? */
+.chat__top {
+  height: 80px;
+}
+
+.chat__timestamp {
+  z-index: 0;
+
+  display: flex;
+  justify-content: center;
+}
+
+.chat__timestamp span {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  padding: 5px 10px;
+  font-size: 12px;
+  color: white;
+
+  margin-bottom: 30px;
+}
+
+.message-row {
+  width: 100%;
+  display: flex;
+
+  margin-bottom: 25px;
+}
+
+.message-row--own {
+  justify-content: flex-end;
+}
+
+.message-row img {
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+  border-radius: 35%;
+}
+
+.message__author {
+  /* span 은 display: block 처리를 해야 margin을 먹일 수 있다. */
+  margin-bottom: 8px;
+  display: block;
+}
+
+.message__author,
+.message__time {
+  opacity: 0.8;
+  font-size: 15px;
+}
+
+.message__body {
+  display: flex;
+  align-items: flex-end;
+}
+
+.message__buble {
+  background-color: white;
+  padding: 10px 12px;
+  border-radius: 15px;
+  border-top-left-radius: 0px;
+  margin-right: 10px;
+}
+
+.message-row--own .message__buble {
+  background-color: var(--yellow);
+
+  border-radius: 15px;
+  border-top-right-radius: 0px;
+
+  margin-right: 0px;
+  margin-left: 10px;
+}
+
+/* 이렇게 순서를 바꿀 수 있음. */
+.message-row--own .message__body {
+  flex-direction: row-reverse;
+}
+
+/* flex 일 경우 위치를 지정할 수 있다. */
+/* .message-row--own .message__buble {
+    order: 1;
+  }
+  
+  .message-row--own .message__time {
+    order: 0;
+  } */
+
+.reply {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 25px;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+.reply i {
+  opacity: 0.5;
+}
+
+.reply .reply__column:first-child {
+  width: 10%;
+  font-size: 30px;
+}
+
+.reply .reply__column:nth-child(2) {
+  width: 80%;
+  font-size: 30px;
+}
+
+.reply .reply__column:last-child {
+  width: 10%;
+}
+
+.reply input {
+  /* height: 30px; */
+  padding: 12px;
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+}
+
+.reply__column:last-child > i,
+.reply__column:last-child button {
+  position: absolute;
+  right: -23px;
+  top: 5px;
+}
+
+.reply__column:last-child > i {
+  top: 5px;
+  right: 5px;
+  font-size: 30px;
+  margin-right: 10px;
+}
+
+.reply__column:last-child button {
+  background-color: rgb(22, 196, 22);
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.reply__column:last-child button i {
+  opacity: 1;
+}
+
+.reply__column:last-child button:focus,
+.reply__column:last-child button:active {
+  outline: none;
+}
+
+#todo-form {
+  display: flex;
+  margin-bottom: 50px;
+}
+#todo-form div:first-child {
+  width: 10%;
+}
+.todo-form__board {
+  border-radius: 30px;
+  background-color: #afd1ab;
+  height: 50vh;
+  width: 80%;
+  padding: 50px;
+}
+#todo-form div:last-child {
+  width: 10%;
+}
+
+.todo-list__button {
+  margin-left: 20px;
+  border-radius: 10px;
+  padding: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
