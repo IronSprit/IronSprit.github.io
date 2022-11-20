@@ -1,3 +1,3 @@
-# MomentumClone 2022 Update
+# Kokoa Clone 2022 Update
 
-Hello JavaScript!!!
+CSS got so much better!!!!!!

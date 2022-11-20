@@ -1,0 +1,127 @@
+.recommended-friends {
+  margin: 25px 0px;
+  padding: 25px 0px;
+  border-top: var(--split-header);
+  border-bottom: var(--split-header);
+}
+
+.recommended-friends span {
+  margin: 100px;
+  /* span은 block 처리를 해야 윤곽 속성이 적용된다. */
+  display: block;
+  font-size: 18px;
+  color: var(--gray);
+}
+
+.recommended-friends__title {
+  font-size: 14px;
+  color: var(--gray);
+}
+
+.open-chat__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.open-chat__header span {
+  color: var(--gray);
+}
+
+.open-post {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.open-post__title {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.open-post__hashtags {
+  text-transform: uppercase;
+  color: var(--gray);
+}
+
+.open-post__members {
+  display: flex;
+  align-items: center;
+}
+
+.open-post__members img {
+  margin-top: 7px;
+  margin-right: 5px;
+  width: 18px;
+  height: 18px;
+}
+
+.open-post__member-count {
+  color: var(--gray);
+  font-size: 14px;
+}
+
+.open-post__members .divider {
+  margin: 0px 5px;
+  color: var(--gray);
+  font-size: 14px;
+}
+
+.open-post__member-status {
+  color: magenta;
+  font-size: 14px;
+}
+
+.open-post__column:last-child {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.open-post__photo {
+  position: relative;
+}
+
+.open-post__photo img {
+  width: 90px;
+  height: 90px;
+  border-radius: 5px;
+}
+
+.open-post__like-tag {
+  display: flex;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  border-radius: 10px;
+  padding: 5px;
+  align-items: center;
+  right: 5px;
+  bottom: 5px;
+  font-size: 13px;
+}
+
+@keyframes heartBeat {
+  0% {
+    color: white;
+    transform: none;
+  }
+  50% {
+    color: tomato;
+    transform: scale(2);
+    /* transform: scale(1, 5); */
+  }
+  100% {
+    color: white;
+  }
+}
+
+.open-post__like-tag span {
+  margin: 0px 3px;
+}
+
+.open-post__like-tag:hover i {
+  /* 브라우져에게 이게 변하는거다라는 확신을 줘서 그래픽 리소스를 더 쓰게 만듦. */
+  will-change: transform;
+
+  animation: heartBeat 1s linear infinite;
+}

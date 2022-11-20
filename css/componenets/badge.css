@@ -1,0 +1,14 @@
+.badge {
+  background-color: tomato;
+  width: 25px;
+  height: 25px;
+  /* 원을 만들고 싶으면 사각형의 반을 쓰면 됨 */
+  border-radius: 15px;
+  /* block: span에 size 처리. */
+  /* display: block; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 600;
+}

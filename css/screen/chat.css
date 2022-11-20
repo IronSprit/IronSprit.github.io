@@ -1,17 +1,57 @@
 #chat-screen {
-  background-color: var(--darkGreen);
-
-  height: auto;
+  background-color: #abc1d1;
+  height: 100vh;
 }
 
 #chat-screen .status-bar {
   z-index: 2;
-  background-color: var(--darkGreen);
+  background-color: #abc1d1;
 }
 #chat-screen .alt-header {
   z-index: 1;
-  background-color: var(--darkGreen);
+  background-color: #abc1d1;
   padding-bottom: 10px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    /* opacity: 0; */
+    transform: translateX(-50px);
+  }
+  to {
+    transform: none;
+    /* opacity: 1; */
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    /* opacity: 0; */
+    transform: translateX(50px);
+  }
+  to {
+    transform: none;
+    /* opacity: 1; */
+  }
+}
+
+.message-row {
+  /* animation: fadeIn 1s linear; */
+  animation: fadeInLeft 1s linear;
+}
+.message-row--own {
+  animation: fadeInRight 1s linear;
 }
 
 /* fixed 때문에 레이어가 맞지 않는다. 해결은? */
@@ -96,12 +136,12 @@
 
 /* flex 일 경우 위치를 지정할 수 있다. */
 /* .message-row--own .message__buble {
-    order: 1;
-  }
-  
-  .message-row--own .message__time {
-    order: 0;
-  } */
+  order: 1;
+}
+
+.message-row--own .message__time {
+  order: 0;
+} */
 
 .reply {
   position: fixed;
@@ -114,6 +154,7 @@
   padding: 5px 25px;
   box-sizing: border-box;
   align-items: center;
+  transition: all 0.3s ease-in-out;
 }
 
 .reply i {
@@ -124,14 +165,9 @@
   width: 10%;
   font-size: 30px;
 }
-
-.reply .reply__column:nth-child(2) {
-  width: 80%;
-  font-size: 30px;
-}
-
 .reply .reply__column:last-child {
-  width: 10%;
+  width: 90%;
+  position: relative;
 }
 
 .reply input {
@@ -140,6 +176,8 @@
   width: 100%;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 20px;
+
+  transition: all 0.3s ease-in-out;
 }
 
 .reply__column:last-child > i,
@@ -157,7 +195,7 @@
 }
 
 .reply__column:last-child button {
-  background-color: rgb(22, 196, 22);
+  background-color: var(--yellow);
   border: none;
   width: 30px;
   height: 30px;
@@ -173,27 +211,34 @@
   outline: none;
 }
 
-#todo-form {
-  display: flex;
-  margin-bottom: 50px;
-}
-#todo-form div:first-child {
-  width: 10%;
-}
-.todo-form__board {
-  border-radius: 30px;
-  background-color: #afd1ab;
-  height: 50vh;
-  width: 80%;
-  padding: 50px;
-}
-#todo-form div:last-child {
-  width: 10%;
+/* 내부에 포커스된 Element가 있다면~ */
+.reply:focus-within .reply__column:first-child,
+.reply:focus-within .fa-smile,
+.reply:focus-within button {
+  opacity: 0;
+  visibility: hidden;
 }
 
-.todo-list__button {
-  margin-left: 20px;
-  border-radius: 10px;
-  padding: 5px;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+.reply:focus-within input {
+  width: 93vw;
+  /* transform: translateX(-13%); */
+
+  /* reply body가 아래로 내려간다. 채팅창만 위치를 고수하도록 하자. */
+  transform: translateX(-13%) translateY(-160px);
+}
+
+.reply .reply__column:first-child,
+.reply .fa-smile,
+.reply button {
+  transition: opacity 1s ease-in-out;
+}
+
+.reply:focus-within {
+  /* bottom: -50px; */
+
+  /* 채팅창 전체를 위로 올리는 효과. */
+  /* transform: translateY(-160px); */
+
+  /* 채팅창 말고는 아래로 내린다. */
+  transform: translateY(160px);
 }

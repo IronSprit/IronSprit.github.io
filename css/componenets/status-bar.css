@@ -9,7 +9,6 @@
   padding: 5px 3px;
   /*  */
   box-sizing: border-box;
-  align-items: center;
 }
 .status-bar__column {
   width: 33%;
@@ -32,15 +31,4 @@
 
 .status-bar__column:first-child span {
   margin-right: 5px;
-  display: block;
-}
-
-.weather-body {
-  display: flex;
-  align-items: center;
-}
-
-.weather-body img {
-  width: 40px;
-  height: 40px;
 }
